@@ -1,0 +1,36 @@
+<view class="page">
+	<view class="page__bd">
+		<view class="app_title">{{product.name}}</view>
+		<view class="app_desc">{{product.desc}}</view>
+			<form bindsubmit="formSubmit" bindreset="formReset">
+			<view class="weui-cells weui-cells_after-title">
+				<view class="weui-cell weui-cell_input">
+					<view class="weui-cell__hd">
+						<view class="weui-label">帐号</view>
+					</view>
+					<view class="weui-cell__bd">
+						<input class="weui-input" placeholder="码云帐号邮箱/手机" type="email" value="{{user_name}}" name="username" focus />
+					</view>
+				</view>
+				<view class="weui-cell weui-cell_input">
+					<view class="weui-cell__hd">
+						<view class="weui-label">密码</view>
+					</view>
+					<view class="weui-cell__bd">
+						<input class="weui-input" placeholder="你的登录密码" password="true" value="" name="password" value="{{user_password}}" />
+					</view>
+				</view>
+			</view>
+			<view style="margin-top:10px;margin-left:20px;">
+				<checkbox-group name="remember_password">
+					<checkbox checked="{{remember_password}}" color="#383838" value="{{remember_password}}" />本地记住密码
+				</checkbox-group>
+			</view>
+			<view class="weui-btn-area">
+				<button form-type="submit" class="weui-btn" type="primary">登录码云</button>
+			</view>
+		</form>
+		<view class="weui-footer weui-footer_fixed-bottom" style="z-index:9999">
+		</view>
+	</view>
+</view>

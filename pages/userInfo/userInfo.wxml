@@ -1,0 +1,10 @@
+<view>头像：
+  <image src="{{userInfo.avatar_url}}"></image>
+</view>
+<view>用户名：{{userInfo.name}}</view>
+<view>签名：{{userInfo.bio}}</view>
+<view>粉丝：{{userInfo.followers}}</view>
+<view>关注：{{userInfo.following}}</view>
+<view>Star数：{{userInfo.stared}}</view>
+<view>Watch数：{{userInfo.watched}}</view>
+<button bindtap="logout">退出登录</button>

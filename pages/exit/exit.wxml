@@ -1,0 +1,3 @@
+<!--pages/exit/exit.wxml-->
+<text>pages/exit/exit.wxml</text>
+<button bindtap="logout">退出登录</button>
