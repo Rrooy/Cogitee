@@ -12,6 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
+    
     var user_name = wx.getStorageSync('user_name');
     var user_password = wx.getStorageSync('user_password');
     var personal_token = wx.getStorageSync('personal_token');
@@ -21,6 +22,10 @@ Page({
       user_password: user_password
     });
   },
+  
+  /**
+   * 点击登录 开始登录
+   */
   formSubmit: function (e) {
     var that = this;
     var postData = e.detail.value;
@@ -50,13 +55,12 @@ Page({
           wx.showToast({
             title: "登录成功"
           });
-          wx.navigateTo({
-            url: '../userInfo/userInfo',
-          })
+           wx.navigateTo({
+             url:'../replist/replist'})
         } else {
           wx.showModal({
             title: '登录失败',
-            content: '我们尝试为你登录码云帐号，但可能你的帐号密码错误',
+            content: '帐号或密码错误',
             showCancel: false
           })
         }
