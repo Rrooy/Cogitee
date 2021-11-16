@@ -1,0 +1,73 @@
+<wxs src="../../utils/timeHelper.wxs" module="timeHelper" />
+
+<view class="page" >
+  <image class='background' src="/images/back1.jpg" mode="aspectFill"></image>
+  <view class="page__bd">
+    
+    <view class="open">
+      <i class="icon-CodeSandbox iconfont public" wx:if="{{repoInfo.public}}"></i>
+      <i class="icon-changyongtubiao-mianxing-7 iconfont private" wx:if="{{!repoInfo.public}}"></i>
+    </view>
+
+    <view class="project_name">
+      {{repoInfo.name}}
+    </view>
+
+    <view class="time">
+      {{timeHelper.parse(repoInfo.pushed_at)}} {{repoInfo.namespace.name}}
+    </view>
+
+    <view class="repo_desc">{{repoInfo.description?repoInfo.description:"暂无描述"}}</view>
+
+    <view class="project_version">
+      <span class="badge" wx:if="{{repoInfo.language}}">{{repoInfo.language?repoInfo.language:'JavaScript'}}</span>
+      <span class="badge" wx:if="{{repoInfo.public}}">{{repoInfo.license?repoInfo.license:'MulanPSL-2.0'}}</span>
+    </view>
+
+    <view class="project_counts">
+      <view class="watch">{{repoInfo.watchers_count}}</view>
+      <view class="star">{{repoInfo.stargazers_count}}</view>
+      <view class="fork">{{repoInfo.forks_count}}</view>
+    </view>
+
+    <view style="margin:0px 10px;">
+      <view class="status_bar" style="background-color:transparent;">
+
+        <view class="star_bar">
+          <view class="stars isNotActive" hover-class="none" bindtap="doStar"
+            wx:if="{{!isStarred}}">
+            <view class="top_value"><i class="iconfont icon-star"></i></view>
+            <view class="top_key">Star</view>
+          </view>
+
+          <view class="star isActive" hover-class="none" bindtap="doUnStar" wx:if="{{isStarred}}">
+            <view class="top_value"><i class="iconfont icon-star"></i></view>
+            <view class="top_key">Starred</view>
+          </view>
+        </view>
+
+        <view class="watch_bar"></view>
+
+          <view class="watchs isNotActive" hover-class="none" bindtap="doWatch"
+            wx:if="{{!isWatched}}">
+            <view class="top_value"><i class="iconfont icon-eye"></i></view>
+            <view class="top_key">Watch</view>
+          </view>
+
+          <view class="watchs isActive" hover-class="none" bindtap="doUnWatch" wx:if="{{isWatched}}">
+            <view class="top_value"><i class="iconfont icon-eye"></i></view>
+            <view class="top_key">Watched</view>
+          </view>
+        </view>
+
+        <view class="PRS_bar">
+
+          <navigator url="../requests/list?namespace={{namespace}}&path={{path}}" class="placeholder isNotActive"
+            hover-class="weui-grid_active">
+            <view class="top_value"><i class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1"></i></view>
+            <view class="top_key">PRs</view>
+          </navigator>     
+      </view>
+    </view>
+  </view>
+</view>
