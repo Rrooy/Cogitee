@@ -56,7 +56,7 @@ Page({
             title: "登录成功"
           });
            wx.navigateTo({
-             url:'../replist/replist'})
+             url:'../userInfo/userInfo'})
         } else {
           wx.showModal({
             title: '登录失败',

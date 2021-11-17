@@ -1,0 +1,21 @@
+<!--pages/createRep/createRep.wxml-->
+<view>
+  <view>仓库名：</view>
+  <input class="inputBox" placeholder="请输入用户名" value="{{repName}}" bindblur="repNameInput"></input>
+  <view>仓库介绍：</view>
+  <input class="inputBox" placeholder="请输入仓库介绍" value="{{repDescription}}" bindblur="repDescriptionInput"></input>
+  <view>是否允许提Issue？</view>
+  <switch checked="{{switchIssue}}" bindchange="switchIssueChange"/>
+  <view>是否提供Wiki？</view>
+  <switch checked="{{switchWiki}}" bindchange="switchWikiChange"/>
+  <view>是否允许用户对仓库进行评论？</view>
+  <switch checked="{{switchComment}}" bindchange="switchCommentChange"/>
+  <view>是否用README初始化仓库？</view>
+  <switch checked="{{switchInit}}" bindchange="switchInitChange"/>
+  <view>是否私有仓库？</view>
+  <switch checked="{{switchPrivate}}" bindchange="switchPrivateChange"/>
+
+
+  <button bindtap="createRepository">创建仓库</button>
+  
+</view>

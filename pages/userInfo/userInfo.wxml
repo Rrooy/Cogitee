@@ -8,3 +8,5 @@
 <view>Star数：{{userInfo.stared}}</view>
 <view>Watch数：{{userInfo.watched}}</view>
 <button bindtap="logout">退出登录</button>
+<button bindtap="toReplist">仓库详情</button>
+<button bindtap="toCreateRep">我想创建仓库</button>

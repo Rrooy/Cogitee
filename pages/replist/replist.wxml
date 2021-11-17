@@ -41,7 +41,7 @@
       </navigator>
     </block>
     <view wx:if="{{list.length==0}}" class="tips">
-            <view>未获取到仓库信息</view>
+      <view>未获取到仓库信息</view>
     </view>
   </view>
 </view>

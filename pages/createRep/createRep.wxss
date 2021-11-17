@@ -1,0 +1,6 @@
+/* pages/createRep/createRep.wxss */
+.inputBox{
+  background-color: rgba(216, 215, 215, 0.452);
+  width: auto;
+  height: 30px;
+}

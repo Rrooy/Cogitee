@@ -16,11 +16,6 @@ Page({
       watched: 0
     }
   },
-  // comming: function () {
-  //   wx.showToast({
-  //     title: '即将上线 敬请期待'
-  //   });
-  // },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -28,7 +23,6 @@ Page({
     wx.showLoading({
       title: '数据加载中',
     });
-    // app.loadFont();
     var that = this;
     that.setData({
       userInfo: that.data.defaultInfo
@@ -61,4 +55,14 @@ Page({
       url: '../login/login'
     })
   },
+  toReplist:function(){
+    wx.navigateTo({
+      url: '../replist/replist',
+    })
+  },
+  toCreateRep:function(){
+    wx.navigateTo({
+      url: '../createRep/createRep',
+    })
+  }
 })
