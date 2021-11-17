@@ -1,0 +1,95 @@
+
+  .project_name{
+    font-size: 30px;
+    color: rgb(228, 23, 74);
+    padding-right: 10px;
+  }
+  .repo_desc{
+    font-size: 12px;
+    color: rgb(228, 23, 74);
+    padding-right: 10px;
+  }
+  .project_version{
+    font-size: 22px;
+    color: rgb(228, 23, 74);
+    padding-right: 10px;
+  }
+  .watch{
+    font-size: 22px;
+    color: rgb(228, 23, 74);
+    padding-right: 10px;
+  }
+  .star{
+    font-size: 22px;
+    color: rgb(228, 23, 74);
+    padding-right: 10px;
+  }
+  .fork{
+    font-size: 22px;
+    color: rgb(228, 23, 74);
+    padding-right: 10px;
+  }
+  .status_bar{
+    display: flex;
+	  flex-direction: row
+  }
+  .member.bar{
+    display: flex;
+	  flex-direction: row
+  }
+  .star_bar{
+    display: flex;
+	  flex-direction: row
+  }
+  .watch_bar{
+    display: flex;
+	  flex-direction: row
+  }
+  .PRS_bar{
+    display: flex;
+	  flex-direction: row
+  }
+  .item {
+    font-size: 24px;
+    color: #666;
+    padding-right: 10px;
+  }
+  .member{
+    display: flex;
+	  flex-direction: row
+  }
+  .member_imag{
+    width: 20%;
+    height: 20%;
+    position:fixed; 
+    background-size:30% 30%;
+    
+  }
+  .member_name{
+    font-size: 22px;
+    color: rgb(228, 23, 74);
+    padding-right: 10px;
+  }
+  .top_value .iconfont {
+    font-size: 24px;
+  }
+  
+  .top_key {
+    font-size: 14px;
+  }
+  
+  .isNotActive {
+    color: #666;
+  }
+  
+  .isActive {
+    color: orangered;
+  }
+  .project_counts .iconfont {
+    vertical-align: middle;
+  }
+  
+  .project_counts .iconfont::before {
+    font-size:16px;
+    vertical-align: middle;
+  }
